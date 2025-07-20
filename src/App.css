@@ -53,3 +53,12 @@ main{
     padding: 10px;
     font-weight: 500;
 }
+
+main button {
+    border-radius: 6px;
+    border: none;
+    background-color: #141413;
+    color: #FAFAF8;
+    padding: 10px;
+    font-weight: 500;
+}

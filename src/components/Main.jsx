@@ -1,32 +1,32 @@
 import '../App.css'
+import { useState } from 'react'
+
 function Main(){
-     const ingredients = ["Chicken", "Oregano", "Tomatoes"]
+     const [ingredients, setIngredients] = useState([])
 
      const mapedIngredient = ingredients.map(element=>(
           <li key={element}>{element}</li>
+     )        
      )
-            
-     )
-
      function handleSubmit(event){
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const newIngredient = formData.get("ingredient")
-        ingredients.push(newIngredient)
-        console.log(ingredients)
+        setIngredients(prev=> [...prev, newIngredient ])
      }
-
+    
     return(
         <main>
             <form
                 onSubmit={handleSubmit}
                 className="add-ingredient-form">
+
                 <input type="text" 
                 placeholder="Ingredient"
                 name='ingredient'
                 
                 />
-                <button >Add Ingredient</button>
+                <button type='submit'>Add Ingredient</button>
             </form>
             <ul>
                 <li>{mapedIngredient}</li>
