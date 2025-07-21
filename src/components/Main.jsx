@@ -2,10 +2,10 @@ import '../App.css'
 import { useState } from 'react'
 
 function Main(){
-     const [ingredients, setIngredients] = useState([])
+     const [ingredients, setIngredients] = useState([])  // creates new state
 
      const mapedIngredient = ingredients.map(element=>(
-          <li key={element}>{element}</li>
+          <li key={element}>{element}</li>               
      )        
      )
      function handleSubmit(event){
