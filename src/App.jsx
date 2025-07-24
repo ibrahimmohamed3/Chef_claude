@@ -1,26 +1,16 @@
-// import Header from './components/Header'
-// import Main from './components/Main'
-import { useState } from "react";
+import Header from './components/Header'
+import Main from './components/Main'
 import "./App.css";
-import pads from "./components/pads";
-
-function App(props) {
-const[color, setColor]=useState(pads)
 
 
 
-  mappedColors = pads.map(item=>(
-  <button key={pads.id}></button>
-))
+function App() {
+
 
   return (
     <>
-      {/* <Header />
-    <Main /> */}
-
-      <main>
-         <div className="pad-container">{mappedColors}</div>
-      </main>
+    <Header />
+    <Main />
     </>
   );
 }
